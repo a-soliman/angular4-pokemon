@@ -1,0 +1,44 @@
+<div class="container">
+	<div class="col-md-12">
+		<div class="row">
+			
+			<!-- ERRORE MSG -->
+			<div 
+				class="alert alert-danger"
+				*ngIf="errorMessage">{{ errorMessage }}
+			</div>
+
+			<div class="col-md-4" *ngFor="let poke of pokemon">
+				<div class="card poke-row text-center">
+					<div class="row text-center text-white">
+						<img [src]="poke.image"	 class="rounded mx-auto d-block poke-img">
+					</div>
+					<div class="card-block">
+						<h3 class="card-title text-center">Pokemon Name</h3>
+						<p class="card-text text-center"><b>Species</b>Poke Species</p>
+						<button class="btn btn-info" type="button">Flying</button>
+						<button class="btn btn-info" type="button">Electric</button>
+						<button class="btn btn-info" type="button">Ice</button>
+
+						<button class="btn btn-success" type="button">Grass</button>
+						<button class="btn btn-success" type="button">Bug</button>
+						<button class="btn btn-warning" type="button">Poison</button>
+						<button class="btn btn-danger" type="button">Fire</button>
+						<button class="btn btn-primary" type="button">Water</button>
+						<button class="btn btn-secondary" type="button">Normal</button>
+						<button class="btn btn-secondary" type="button">Psychic</button>
+						<span class="card-link" hidden="">
+							<i class="fa fa-pencil"></i>
+						</span>
+						<span class="card-link text-warning">
+							<i class="fa fa-info-circle fa-2x"></i>
+						</span>
+						<span class="card-link text-danger">
+							<i class="fa fa-trash-o fa-2x"></i>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
